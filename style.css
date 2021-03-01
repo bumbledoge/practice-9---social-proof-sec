@@ -191,5 +191,7 @@ body {
     .description {
         max-width: 350px;
     }
-
+    .c {
+        height: 250px;
+    }
 }
