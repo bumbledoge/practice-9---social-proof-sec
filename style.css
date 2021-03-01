@@ -17,8 +17,9 @@ body {
 .top {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
+    margin: 0px auto;
     margin-top: 5%;
 }
 
@@ -81,11 +82,14 @@ body {
 
 /* BOTTOM */
 .customers {
-    width: 1150px;
-    margin: 0px auto;
+    
     margin-top: 110px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    
+    grid-template-columns: 350px 350px 350px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 .c {
     width: 350px;
@@ -120,8 +124,72 @@ body {
 }
 
 .customer1 {
+    /* grid-area: c1; */
     margin-top: -20px;
 }
-.customer3 {
+.customer2 {
+    /* grid-area: c2; */
+}.customer3 {
+    /* grid-area: c3; */
     margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .top {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .magazines {
+        margin-top: 50px;
+    }
+    .m {
+        margin: 15px 0px;
+    }
+    .magazine1 {
+        margin-left: 0px;
+    }
+    .magazine3 {
+        margin-left: 0px;
+    }
+
+    .customers {
+        /* grid-template-areas: "c1 c2"
+                             "c3"; */
+        grid-template-columns: 350px 350px;
+        justify-content: center;
+    }
+    .customer1 {
+        margin-top: 0px;
+    }
+    .customer3 {
+        margin-top: 0px;
+        margin-left: 55%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .top {
+        margin-top: 10%;
+    }
+    .customers {
+
+        grid-template-columns: 350px;
+    }
+    .customer3 {
+        margin: 0px;
+    }
+    .m {
+        max-width: 350px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rater {
+        margin-top: 10px;
+    }
+    .description {
+        max-width: 350px;
+    }
+
 }
